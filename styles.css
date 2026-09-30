@@ -53,3 +53,12 @@ section:not(.hero){padding:60px 0}.section-heading{margin-bottom:30px}.section-t
 }
 @media(max-width:360px){.container{width:calc(100% - 32px)}.skills-grid{grid-template-columns:1fr}.hero-title{font-size:39px}.code-body{padding:20px 10px;font-size:9px}.hero-buttons{gap:10px}.btn{padding:12px 17px}.contact-panel{padding:22px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
+
+/* Personal avatar and signature wordmark */
+.logo{gap:13px;flex-shrink:0}
+.logo-avatar{width:46px;height:46px;border-radius:50%;padding:2px;border:1px solid #c7b7ff77;background:#241b35;display:block;box-shadow:0 0 0 4px #bdacff08;flex-shrink:0}
+.logo-avatar img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.logo-wordmark{font-family:"Trebuchet MS","Segoe UI",sans-serif;font-size:27px;font-weight:700;font-style:italic;letter-spacing:-1.2px;line-height:1.25;color:#f4f0ff;display:inline-block;padding-right:3px}
+.logo-name-accent{color:#c4b2ff}.logo-period{color:#c4b2ff;margin-left:1px}
+.logo:hover .logo-name-accent,.logo:focus-visible .logo-name-accent{color:#dfd2ff}
+@media(max-width:760px){.logo{gap:11px}.logo-avatar{width:40px;height:40px}.logo-wordmark{font-size:24px;letter-spacing:-1px}}
