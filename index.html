@@ -1,24 +1,28 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>wangyebao - 个人主页</title>
+    <title>wangyebao · 全栈开发者与技术爱好者</title>
+    <meta name="description" content="wangyebao 的个人网站，分享 Web 开发项目、前后端技术与实践。探索作品、了解技术栈，或联系交流项目。">
+    <meta name="theme-color" content="#101014">
+    <meta property="og:title" content="wangyebao · 全栈开发者">
+    <meta property="og:description" content="用代码，把想法变成可用的作品。了解我的技术栈、项目与开发实践。">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
     <!-- 导航栏 -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="主导航">
         <div class="container">
-            <a href="#home" class="logo">wangyebao</a>
-            <button class="menu-toggle" aria-label="菜单">
+            <a href="#home" class="logo"><span class="logo-mark" aria-hidden="true">w.</span> wangyebao</a>
+            <button class="menu-toggle" aria-label="打开菜单" aria-controls="navigation" aria-expanded="false" type="button">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="navigation">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于</a></li>
                 <li><a href="#skills">技能</a></li>
@@ -28,29 +32,37 @@
         </div>
     </nav>
 
+    <main id="main">
     <!-- Hero 区域 -->
     <section id="home" class="hero">
+      <div class="container hero-grid">
         <div class="hero-content">
-            <h1 class="hero-title">你好，我是 <span class="highlight">wangyebao</span></h1>
+            <p class="eyebrow"><span class="status-dot"></span> HELLO, WORLD. 我是 wangyebao</p>
+            <h1 class="hero-title">用代码，<br>让想法<span class="highlight">发生。</span></h1>
             <p class="hero-subtitle">全栈开发者 / 技术爱好者</p>
-            <p class="hero-desc">热爱编程与技术，喜欢用代码解决实际问题。专注于 Web 开发，追求简洁高效的代码风格，乐于探索新技术。</p>
+            <p class="hero-desc">从界面到服务端，专注于构建简洁、可靠的 Web 体验。<br class="desktop-break">热爱技术，也在意每一个使用细节。</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">查看作品</a>
+                <a href="#projects" class="btn btn-primary">探索我的作品 <span aria-hidden="true">↗</span></a>
                 <a href="#contact" class="btn btn-outline">联系我</a>
             </div>
         </div>
-        <div class="hero-visual">
-            <div class="avatar-wrapper">
-                <div class="avatar-ring"></div>
-                <div class="avatar-placeholder">👤</div>
+        <div class="hero-visual" aria-label="Web 开发技术插画">
+            <div class="orbit-label orbit-top">IDEA → CODE → EXPERIENCE</div>
+            <div class="code-window">
+                <div class="window-bar"><span class="window-dots" aria-hidden="true">● ● ●</span><span>hello-world.js</span><span>↗</span></div>
+                <div class="code-body"><span class="code-comment">// 把好奇心写进代码</span><br><span class="code-purple">const</span> developer = {<br><span class="indent">name: <span class="code-green">'wangyebao'</span>,</span><br><span class="indent">focus: <span class="code-green">'Web Development'</span>,</span><br><span class="indent">mindset: <span class="code-green">'Keep building'</span></span><br>};<br><br>developer.<span class="code-purple">create</span>(<span class="code-green">'something meaningful'</span>);<span class="code-cursor" aria-hidden="true"></span></div>
+                <div class="window-footer"><span><i class="status-dot"></i> Always learning</span><span>UTF-8</span></div>
             </div>
+            <div class="orbit-label orbit-bottom"><span aria-hidden="true">✳</span> 从一个想法，到一次实现。</div>
         </div>
+      </div>
+      <div class="container hero-bottom"><span>BUILD WITH CARE. KEEP EXPLORING.</span><a href="#about">往下，认识我 <span aria-hidden="true">↓</span></a></div>
     </section>
 
     <!-- 关于我 -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">关于我</h2>
+            <div class="section-heading"><p class="eyebrow">01 / ABOUT</p><h2 class="section-title">技术之外，也关于我</h2></div>
             <div class="about-content">
                 <div class="about-text">
                     <p>大家好，我是 wangyebao，一名热爱技术的全栈开发者。我对 Web 开发充满热情，擅长从前端到后端的完整开发流程。</p>
@@ -77,7 +89,7 @@
     <!-- 技能 -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">技能</h2>
+            <div class="section-heading"><p class="eyebrow">02 / TOOLKIT</p><h2 class="section-title">从前端到后端</h2></div>
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon">🎨</div>
@@ -116,11 +128,11 @@
     <!-- 项目 -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">项目作品</h2>
+            <div class="section-heading"><p class="eyebrow">03 / SELECTED WORK</p><h2 class="section-title">把想法做成作品</h2></div>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">项目封面</div>
+                        <div class="project-art art-dashboard" aria-hidden="true"><div class="mini-browser"><div class="mini-top">WORKSPACE <span>● ● ●</span></div><div class="mini-dashboard"><div class="mini-sidebar"><i></i><i></i><i></i></div><div class="mini-main"><div class="mini-stats"><i></i><i></i><i></i></div><div class="mini-chart"><b></b><b></b><b></b><b></b><b></b><b></b></div></div></div></div><span class="art-caption">01 / ADMIN · 项目示意</span></div>
                     </div>
                     <div class="project-info">
                         <h3>企业官网管理系统</h3>
@@ -131,14 +143,14 @@
                             <span class="tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">在线演示</a>
-                            <a href="#" class="link-btn">源码</a>
+                            <a href="#contact" class="project-inquiry">了解项目 <span aria-hidden="true">↗</span></a>
+                            <span class="project-note">演示与源码待补充</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">项目封面</div>
+                        <div class="project-art art-shop" aria-hidden="true"><div class="mini-browser"><div class="mini-top">THE COLLECTION <span>↗</span></div><div class="mini-products"><div><i class="shape-one"></i><b></b><em></em></div><div><i class="shape-two"></i><b></b><em></em></div><div><i class="shape-three"></i><b></b><em></em></div></div></div><span class="art-caption">02 / COMMERCE · 项目示意</span></div>
                     </div>
                     <div class="project-info">
                         <h3>在线商城平台</h3>
@@ -149,14 +161,14 @@
                             <span class="tag">MySQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">在线演示</a>
-                            <a href="#" class="link-btn">源码</a>
+                            <a href="#contact" class="project-inquiry">了解项目 <span aria-hidden="true">↗</span></a>
+                            <span class="project-note">演示与源码待补充</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">项目封面</div>
+                        <div class="project-art art-blog" aria-hidden="true"><div class="mini-browser"><div class="mini-top">NOTES & IDEAS <span>✳</span></div><div class="mini-article"><span>THINK. BUILD. SHARE.</span><strong>记录思考，<br>连接灵感。</strong><div><i></i><i></i><i></i></div></div></div><span class="art-caption">03 / WRITING · 项目示意</span></div>
                     </div>
                     <div class="project-info">
                         <h3>个人博客系统</h3>
@@ -167,8 +179,8 @@
                             <span class="tag">PostgreSQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="link-btn">在线演示</a>
-                            <a href="#" class="link-btn">源码</a>
+                            <a href="#contact" class="project-inquiry">了解项目 <span aria-hidden="true">↗</span></a>
+                            <span class="project-note">演示与源码待补充</span>
                         </div>
                     </div>
                 </div>
@@ -179,7 +191,7 @@
     <!-- 联系方式 -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">联系我</h2>
+            <div class="section-heading"><p class="eyebrow">04 / GET IN TOUCH</p><h2 class="section-title">下一次合作，从这里开始</h2></div>
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>让我们一起合作吧！</h3>
@@ -187,15 +199,15 @@
                     <div class="contact-links">
                         <div class="contact-item">
                             <span class="contact-icon">💬</span>
-                            <span>QQ: 2974357638</span>
+                            <span>QQ: 2974357638</span><button class="copy-button" type="button" data-copy="2974357638" aria-label="复制 QQ 号 2974357638">复制</button>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>wangyebao@qq.com</span>
+                            <a href="mailto:wangyebao@qq.com">wangyebao@qq.com ↗</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">🔗</span>
-                            <span>github.com/wangyebao</span>
+                            <a href="https://github.com/2974357638" target="_blank" rel="noopener noreferrer">github.com/2974357638 ↗</a>
                         </div>
                         <div class="contact-item">
                             <span class="contact-icon">📍</span>
@@ -203,32 +215,28 @@
                         </div>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">姓名</label>
-                        <input type="text" id="name" name="name" placeholder="你的名字" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">邮箱</label>
-                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">消息</label>
-                        <textarea id="message" name="message" rows="5" placeholder="请输入你的消息..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">发送消息</button>
-                </form>
+                <div class="contact-panel">
+                    <span class="contact-symbol" aria-hidden="true">↗</span>
+                    <p class="eyebrow">LET'S MAKE IT HAPPEN</p>
+                    <h3>你有想法，<br>我们聊聊。</h3>
+                    <p>项目需求、技术交流，或只是打个招呼。<br>欢迎写一封邮件给我。</p>
+                    <a class="btn btn-primary" href="mailto:wangyebao@qq.com">写邮件给我 <span aria-hidden="true">↗</span></a>
+                    <p class="contact-help">将打开你的邮件应用，由你确认后发送。</p>
+                    <button class="copy-button" type="button" data-copy="wangyebao@qq.com">复制邮箱地址</button>
+                    <p id="copy-status" role="status" aria-live="polite"></p>
+                </div>
             </div>
         </div>
     </section>
 
+    </main>
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 wangyebao. All rights reserved.</p>
+            <p>© <span id="year">2026</span> wangyebao</p><p>用热爱构建，用细节打磨。</p><a href="#home">回到顶部 ↑</a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
